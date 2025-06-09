@@ -17,7 +17,7 @@ console.log(textFusion("ciao", "mondo"));
 const randomNums = function () {
   let arr = [];
   for (i = 0; i < 10; i++) {
-    arr.push(Math.ceil(Math.random() * 100));
+    arr.push(Math.floor(Math.random() * 101));
   }
   return arr;
 };
@@ -52,12 +52,6 @@ console.log(sommaReduce);
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
-
-// const addsN = function (arr, n1) {
-//   arr.map(numeri) =>{
-
-//   }
-// }
 
 const addsN = function (arr, n) {
   return arr.map((elemento) => elemento + n);
@@ -267,11 +261,10 @@ console.log(filterMillenium(movies));
 // console.log(sommaReduce);
 
 const addsYears = function (arr) {
-  const total = arr.reduce(
+  return arr.reduce(
     (acc, element) => parseInt(acc) + parseInt(element.Year),
     0
   );
-  return total;
 };
 console.log(addsYears(movies));
 
